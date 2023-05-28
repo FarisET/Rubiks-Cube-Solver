@@ -1,0 +1,3 @@
+Initial version of COH program which does not contain the solving logic
+Meaning no states/ neighbours are generated, because no rotation logic and moves making logic in this version
+HOwever it properly showcases the A* and COH heuristic along with the supporting classes of the Cube. Shows a basic structure of thr code
