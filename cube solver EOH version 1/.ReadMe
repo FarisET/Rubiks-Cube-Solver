@@ -1,0 +1,2 @@
+Initial version of EOH program which does not contain the solving logic
+Meaning no states/ neighbours are generated, because no rotation logic and moves making logic in this version
