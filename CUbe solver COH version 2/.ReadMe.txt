@@ -1,0 +1,2 @@
+This code is very similar to the EOH code. Simply substituded heuristics and extracting corners instead of edges.
+However other parts of the code were not modifies accordingly to support these changes so this VERSION DOES NOT RUN
