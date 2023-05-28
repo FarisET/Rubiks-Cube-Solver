@@ -1,0 +1,2 @@
+This calculates both COH and EOH and returns the better heuristic values of the two by using max function
+Tires to get best of both worlds
