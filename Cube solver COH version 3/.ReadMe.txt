@@ -1,0 +1,4 @@
+The version 3 of COH is an attempt to properly implement the COH heuristic by making supoorting changes in other parts of the code which version 2 doesn't do
+The problem with this version is that it takes too long to for the cube to find a solution. So freezes
+I can't see any evident infinite loops in the code, so i'm confident the codes fine.
+A rubiks cube has 26,830,560 solved states and i was unable to write a function to generate these solved states. So issue might be because of this
