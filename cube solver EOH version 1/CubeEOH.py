@@ -11,7 +11,6 @@ class Cube:
         # and return True if they are the same, indicating that the cube is solved.
         # Otherwise, return False.
 
-        # Assuming the solved state is represented as a string, you can compare it with self.state:
         solved_state = "RRRRRRRRRGGGGGGGGGWWWWWWWWWOOOOOOOOOBBBBBBBBBYYYYYYYYY"
         return self.state == solved_state
 
