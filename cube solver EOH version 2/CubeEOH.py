@@ -47,7 +47,7 @@ class Cube:
 
         return neighbors
 
-    
+    # The get_move_to method in the code provided is used to determine the move required to transition from the current cube to a neighbor cube
     def get_move_to(self, neighbor):
         moves = {
             'rotate_up_clockwise': 'U',
@@ -176,6 +176,7 @@ def a_star_solver(cube, move_limit=100000):
     solution_moves = []
     start_time = time.time()  # Start time for measuring the solving time
 
+    #tried to fix freezing problem with move_limit
     while open_set and move_count < move_limit:
         _, current = heapq.heappop(open_set)  # pop the cube with the lowest f-score
         if current.is_solved():
