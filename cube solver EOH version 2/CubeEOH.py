@@ -30,19 +30,19 @@ class Cube:
         neighbors = []
 
         # Rotate the top face clockwise
-        neighbor1 = Cube(self.rotate_up_clockwise())
+        cube_copy = Cube(self.rotate_up_clockwise())
         neighbors.append(neighbor1)
 
         # Rotate the top face counterclockwise
-        neighbor2 = Cube(self.rotate_up_counter_clockwise())
+        cube_copy = Cube(self.rotate_up_counter_clockwise())
         neighbors.append(neighbor2)
 
         # Rotate the right face clockwise
-        neighbor3 = Cube(self.rotate_right_clockwise())
+        cube_copy = Cube(self.rotate_right_clockwise())
         neighbors.append(neighbor3)
 
         # Rotate the right face counterclockwise
-        neighbor4 = Cube(self.rotate_right_counter_clockwise())
+        cube_copy = Cube(self.rotate_right_counter_clockwise())
         neighbors.append(neighbor4)
 
         return neighbors
