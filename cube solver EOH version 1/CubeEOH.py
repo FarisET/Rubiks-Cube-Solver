@@ -17,13 +17,16 @@ class Cube:
     def get_neighbors(self):
         # Generate all possible next states from the current state
         neighbors = []
-        # Add code to generate neighbor states here
+      
         return neighbors
 
 
     def get_edges(self):
+        #This condition is necessary to handle scenarios where the cube state may be incomplete or not properly formatted,
+        #ensuring that the program does not encounter index out-of-range 
         if len(self.state) >= 19:
             edges = [
+                #access string elements using indexing
                 self.state[9], self.state[10], self.state[11],
                 self.state[18], '', self.state[12],
                 self.state[17], self.state[16], self.state[15],
@@ -37,17 +40,22 @@ class Cube:
         edges = self.get_edges()
         orientations = [edge.get_orientation() for edge in edges]
         # A solved cube has all edges oriented the same way (0), so count how many edges need to be rotated
+        # orientation != 0 filters out correctly oriented edges and only returns mis-oriented edge values
         return sum([orientation for orientation in orientations if orientation != 0])
 
+    #object equality and hashability are important when using comparing and storing CUbe class in sets
+    
+    #overrides = to support comparison b/w cubes
     def __eq__(self, other):
         return self.state == other.state
-
+    
+    #hashes strings of cube states
     def __hash__(self):
         return hash(str(self.state))
 
 
 def a_star_solver(cube):
-    open_set = [(0, cube)]  # priority queue
+    open_set = [(0, cube)]  # priority queue (store f-score,cube)
     closed_set = set()
     move_count = 0  # Number of moves taken to solve the cube
     solution_moves = []
